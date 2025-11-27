@@ -59,50 +59,50 @@ export const sampleTestimonials = [
   {
     id: 'asg',
     name: 'ASG',
-    role: 'Klien Kawan Curhat',
+    company: 'Klien Kawan Curhat',
     quote: 'Konsultasi yang sangat membantu! Kawan Curhat memberikan solusi praktis untuk masalah kontrak bisnis kami. Sangat profesional dan mudah dipahami.',
     rating: 5,
-    image: '/aset/Folder Baru/ASG.jpg'
+    imgSrc: '/aset/Folder Baru/ASG.jpg'
   },
   {
     id: 'kh-yusuf-mansur',
     name: 'KH Yusuf Mansur',
-    role: 'Tokoh Nasional',
+    company: 'Tokoh Nasional',
     quote: 'Tim yang sangat responsif dan komunikatif. Mereka membantu kami dalam penyusunan kontrak kerjasama dengan sangat detail dan aman.',
     rating: 5,
-    image: '/aset/Folder Baru/KH Yusuf Mansur.jpg'
+    imgSrc: '/aset/Folder Baru/KH Yusuf Mansur.jpg'
   },
   {
     id: 'ahmad-wijaya',
     name: 'Ahmad Wijaya',
-    role: 'UD Sejahtera Abadi',
+    company: 'UD Sejahtera Abadi',
     quote: 'Pendampingan hukum bisnis yang luar biasa! Kawan Curhat membantu kami menghindari risiko hukum yang tidak kami sadari sebelumnya.',
     rating: 5,
-    image: '/aset/FQGwjWxFujEGoR5UIhNoCDGNls.png'
+    imgSrc: '/aset/FQGwjWxFujEGoR5UIhNoCDGNls.png'
   },
   {
     id: 'rina-kusuma',
     name: 'Rina Kusuma',
-    role: 'PT Karya Mandiri',
+    company: 'PT Karya Mandiri',
     quote: 'Layanan audit kontrak yang sangat teliti. Mereka menemukan celah-celah yang bisa merugikan bisnis kami. Terima kasih atas perlindungannya!',
     rating: 5,
-    image: '/aset/nYaGB97fhZHzf1oxKf5s0vj4.png'
+    imgSrc: '/aset/nYaGB97fhZHzf1oxKf5s0vj4.png'
   },
   {
     id: 'dedi-prasetyo',
     name: 'Dedi Prasetyo',
-    role: 'Toko Elektronik Jaya',
+    company: 'Toko Elektronik Jaya',
     quote: 'Konsultan yang benar-benar memahami kebutuhan bisnis. Solusi yang diberikan praktis dan langsung bisa diterapkan. Highly recommended!',
     rating: 5,
-    image: '/aset/qejt4Jf3i6rJpIMKhN4RkQhG0.png'
+    imgSrc: '/aset/qejt4Jf3i6rJpIMKhN4RkQhG0.png'
   },
   {
     id: 'linda-permata',
     name: 'Linda Permata',
-    role: 'Startup Digital Indonesia',
+    company: 'Startup Digital Indonesia',
     quote: 'Pendekatan yang komunikatif dan solutif membuat kami merasa nyaman. Kawan Curhat benar-benar mitra bisnis yang terpercaya.',
     rating: 5,
-    image: '/aset/FQGwjWxFujEGoR5UIhNoCDGNls.png'
+    imgSrc: '/aset/FQGwjWxFujEGoR5UIhNoCDGNls.png'
   }
 ];
 
@@ -110,28 +110,28 @@ export const sampleVideoTestimonials = [
   {
     id: '1',
     name: 'ASG',
-    role: 'Klien Kawan Curhat',
+    company: 'Klien Kawan Curhat',
     videoUrl: '/aset/Folder Baru/Video WhatsApp 2025-11-24 pukul 12.22.14_5784c61c.mp4',
     description: 'Testimoni Video - Pengalaman Konsultasi Hukum Bisnis',
-    image: '/aset/Folder Baru/ASG.jpg',
+    imgSrc: '/aset/Folder Baru/ASG.jpg',
     duration: '1:30'
   },
   {
     id: '2',
     name: 'KH Yusuf Mansur',
-    role: 'Tokoh Nasional',
+    company: 'Tokoh Nasional',
     videoUrl: '/aset/Folder Baru/Video WhatsApp 2025-11-24 pukul 12.22.28_cbdf5059.mp4',
     description: 'Testimoni Video - Kepercayaan dan Profesionalisme',
-    image: '/aset/Folder Baru/KH Yusuf Mansur.jpg',
+    imgSrc: '/aset/Folder Baru/KH Yusuf Mansur.jpg',
     duration: '1:45'
   },
   {
     id: '3',
     name: 'Ahmad Wijaya',
-    role: 'UD Sejahtera Abadi',
+    company: 'UD Sejahtera Abadi',
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     description: 'Pendampingan Hukum Bisnis',
-    image: '/aset/FQGwjWxFujEGoR5UIhNoCDGNls.png',
+    imgSrc: '/aset/FQGwjWxFujEGoR5UIhNoCDGNls.png',
     duration: '2:30'
   }
 ];
@@ -140,32 +140,27 @@ export const sampleFAQs = [
   {
     id: '1',
     question: 'Apa saja layanan yang ditawarkan Kawan Curhat?',
-    answer: 'Kami menyediakan layanan konsultasi hukum bisnis, perlindungan bisnis dari risiko hukum, penyusunan dan audit kontrak, mitigasi risiko, negosiasi & mediasi, serta pendampingan hukum untuk pelaku usaha dan profesional.',
-    category: 'Layanan'
+    answer: 'Kami menyediakan layanan konsultasi hukum bisnis, perlindungan bisnis dari risiko hukum, penyusunan dan audit kontrak, mitigasi risiko, negosiasi & mediasi, serta pendampingan hukum untuk pelaku usaha dan profesional.'
   },
   {
     id: '2',
     question: 'Bagaimana cara memulai konsultasi dengan Kawan Curhat?',
-    answer: 'Anda dapat menghubungi kami melalui WhatsApp di 08567886251 atau mengisi formulir kontak di website. Kami akan menjadwalkan konsultasi awal untuk memahami kebutuhan bisnis Anda.',
-    category: 'Kontak'
+    answer: 'Anda dapat menghubungi kami melalui WhatsApp di 08567886251 atau mengisi formulir kontak di website. Kami akan menjadwalkan konsultasi awal untuk memahami kebutuhan bisnis Anda.'
   },
   {
     id: '3',
     question: 'Apakah konsultasi pertama berbayar?',
-    answer: 'Kami menawarkan konsultasi awal gratis untuk memahami kebutuhan Anda. Setelah itu, kami akan memberikan proposal layanan dengan biaya yang transparan sesuai dengan kompleksitas kebutuhan bisnis Anda.',
-    category: 'Biaya & Pembayaran'
+    answer: 'Kami menawarkan konsultasi awal gratis untuk memahami kebutuhan Anda. Setelah itu, kami akan memberikan proposal layanan dengan biaya yang transparan sesuai dengan kompleksitas kebutuhan bisnis Anda.'
   },
   {
     id: '4',
     question: 'Berapa lama proses penyusunan kontrak bisnis?',
-    answer: 'Waktu penyusunan kontrak bervariasi tergantung kompleksitas, biasanya 3-7 hari kerja. Kami memastikan setiap kontrak disusun dengan teliti untuk melindungi kepentingan bisnis Anda secara maksimal.',
-    category: 'Kontrak'
+    answer: 'Waktu penyusunan kontrak bervariasi tergantung kompleksitas, biasanya 3-7 hari kerja. Kami memastikan setiap kontrak disusun dengan teliti untuk melindungi kepentingan bisnis Anda secara maksimal.'
   },
   {
     id: '5',
     question: 'Apakah data dan informasi bisnis saya dijamin kerahasiaannya?',
-    answer: 'Tentu saja. Kerahasiaan adalah salah satu nilai utama kami. Semua data dan informasi klien dijamin keamanannya dengan standar kerahasiaan profesional tertinggi dan tidak akan dibagikan kepada pihak manapun.',
-    category: 'Keamanan Data'
+    answer: 'Tentu saja. Kerahasiaan adalah salah satu nilai utama kami. Semua data dan informasi klien dijamin keamanannya dengan standar kerahasiaan profesional tertinggi dan tidak akan dibagikan kepada pihak manapun.'
   }
 ];
 
@@ -277,7 +272,7 @@ export const loadSampleData = (contentType: string) => {
 };
 
 // Data version - increment this when image paths or data structure changes
-export const DATA_VERSION = 6;
+export const DATA_VERSION = 7;
 
 // Helper function untuk save ke localStorage
 export const initializeSampleData = () => {

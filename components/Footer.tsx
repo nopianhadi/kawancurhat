@@ -53,40 +53,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          
-          <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '200ms' }}>
-            <h3 className="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Ikuti Kami</h3>
-            <ul className="space-y-1.5 sm:space-y-2">
-              {settings.facebook && (
-                <li>
-                  <a href={settings.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-brand-accent transition-colors duration-200 text-xs sm:text-sm">
-                    Facebook
-                  </a>
-                </li>
-              )}
-              {settings.instagram && (
-                <li>
-                  <a href={settings.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-brand-accent transition-colors duration-200 text-xs sm:text-sm">
-                    Instagram
-                  </a>
-                </li>
-              )}
-              {settings.linkedin && (
-                <li>
-                  <a href={settings.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-brand-accent transition-colors duration-200 text-xs sm:text-sm">
-                    LinkedIn
-                  </a>
-                </li>
-              )}
-              {settings.youtube && (
-                <li>
-                  <a href={settings.youtube} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-brand-accent transition-colors duration-200 text-xs sm:text-sm">
-                    YouTube
-                  </a>
-                </li>
-              )}
-            </ul>
-          </div>
         </div>
       </div>
       <div className="border-t border-gray-200">

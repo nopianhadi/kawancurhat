@@ -2,8 +2,8 @@
 
 ## 👥 Tim Konsultan (4 Orang)
 
-1. **Andi Firmansyah, S.H., M.H.**
-   - Posisi: Konsultan Hukum Bisnis Senior
+1. **Aship Firmansyah, S.E., S.H.**
+   - Posisi: Konsultan Hukum Bisnis dan Pengacara
    - Keahlian: Strategi legal bisnis, perizinan usaha
 
 2. **Dewi Lestari, S.H.**

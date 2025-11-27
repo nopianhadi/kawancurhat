@@ -84,7 +84,7 @@ Semua komponen dan halaman telah disesuaikan dengan branding **Kawan Curhat Kons
 
 ## 👥 Tim Konsultan
 
-1. **Andi Firmansyah, S.H., M.H.** - Konsultan Hukum Bisnis Senior
+1. **Aship Firmansyah, S.E., S.H.** - Konsultan Hukum Bisnis dan Pengacara
 2. **Dewi Lestari, S.H.** - Spesialis Kontrak & Legal Drafting
 3. **Rudi Hartono, S.H., M.Kn.** - Ahli Mitigasi Risiko Bisnis
 4. **Maya Sari, S.H.** - Konsultan Kepatuhan & Compliance

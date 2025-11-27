@@ -88,27 +88,27 @@ const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <div className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white">
+    <div className="py-10 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white via-gray-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <p className="text-brand-accent text-sm font-semibold mb-3 uppercase tracking-wider">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <p className="text-brand-accent text-xs sm:text-sm font-semibold mb-2 sm:mb-3 uppercase tracking-wider">
             Mengapa Memilih Kami
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
             Keunggulan Layanan Kami
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
             Solusi hukum bisnis yang aman, praktis, dan berintegritas
           </p>
         </div>
 
         {/* Features Grid - Google Material Design Style */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12 md:mb-16">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-transparent overflow-hidden"
+              className="group relative bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-transparent overflow-hidden"
               style={{
                 animationDelay: `${index * 100}ms`,
                 opacity: 0,
@@ -119,17 +119,17 @@ const WhyChooseUs: React.FC = () => {
               <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
               
               {/* Icon Container */}
-              <div className={`relative w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
-                <div className="text-white">
+              <div className={`relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-3 sm:mb-4 md:mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
+                <div className="text-white scale-75 sm:scale-90 md:scale-100">
                   {feature.icon}
                 </div>
               </div>
 
               {/* Content */}
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-gray-900 group-hover:to-gray-600 transition-all duration-300">
+              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-gray-900 group-hover:to-gray-600 transition-all duration-300">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
                 {feature.description}
               </p>
 
@@ -140,11 +140,11 @@ const WhyChooseUs: React.FC = () => {
         </div>
 
         {/* Stats Cards - Compact Google Style */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-brand-accent/20"
+              className="group bg-white rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-brand-accent/20"
               style={{
                 animationDelay: `${(index + 4) * 100}ms`,
                 opacity: 0,
@@ -152,24 +152,24 @@ const WhyChooseUs: React.FC = () => {
               }}
             >
               {/* Icon */}
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-accent to-amber-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-white">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br from-brand-accent to-amber-600 flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-white scale-75 sm:scale-90 md:scale-100">
                   {stat.icon}
                 </div>
               </div>
 
               {/* Title */}
-              <h4 className="text-xs sm:text-sm font-bold text-gray-900 mb-1">
+              <h4 className="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 mb-1">
                 {stat.title}
               </h4>
 
               {/* Value */}
-              <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-brand-accent to-amber-600 bg-clip-text text-transparent mb-1">
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-brand-accent to-amber-600 bg-clip-text text-transparent mb-1">
                 {stat.value}
               </div>
 
               {/* Label */}
-              <p className="text-xs sm:text-sm text-gray-600 leading-snug">
+              <p className="text-[10px] sm:text-xs md:text-sm text-gray-600 leading-snug">
                 {stat.label}
               </p>
             </div>

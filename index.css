@@ -5,20 +5,36 @@
 }
 
 :root {
+  /* Kawan Curhat Brand Colors - Gold/Brown Theme */
+  --primary-text: #202124;
+  --secondary-text: #5f6368;
+  --accent-gold: #C19D60;
+  --accent-brown: #B8860B;
+  --surface: #ffffff;
+  --surface-variant: #faf9f7;
+  --border-light: #e8e6e3;
+  --shadow-sm: 0 1px 2px 0 rgba(193, 157, 96, 0.3), 0 1px 3px 1px rgba(193, 157, 96, 0.15);
+  --shadow-md: 0 1px 3px 0 rgba(193, 157, 96, 0.3), 0 4px 8px 3px rgba(193, 157, 96, 0.15);
+  --shadow-lg: 0 2px 6px 2px rgba(193, 157, 96, 0.15), 0 8px 24px 4px rgba(193, 157, 96, 0.15);
+  
+  /* Legacy gradients for compatibility */
   --gradient-primary: linear-gradient(135deg, #C19D60 0%, #D4AF6A 50%, #E8C78F 100%);
   --gradient-secondary: linear-gradient(135deg, #1a2332 0%, #2d3748 50%, #4a5568 100%);
   --gradient-accent: linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #FFD700 100%);
   --gradient-warm: linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #FF7F50 100%);
-  --gradient-hero: linear-gradient(135deg, #1a2332 0%, #2d3748 100%);
-  --gradient-overlay: linear-gradient(135deg, rgba(193, 157, 96, 0.9) 0%, rgba(212, 175, 106, 0.8) 100%);
-  --gradient-card: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #faf9f7 100%);
+  --gradient-overlay: linear-gradient(135deg, rgba(193, 157, 96, 0.05) 0%, rgba(212, 175, 106, 0.05) 100%);
+  --gradient-card: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+  background: #ffffff;
+  color: #202124;
 }
 
 html {
@@ -195,7 +211,7 @@ html {
 
 /* Focus Visible for Accessibility */
 *:focus-visible {
-  outline: 2px solid #C19D60;
+  outline: 2px solid var(--accent-gold);
   outline-offset: 2px;
 }
 

@@ -8,11 +8,37 @@ const AdminApp: React.FC = () => {
 
   useEffect(() => {
     // Cek apakah user sudah login
-    const token = localStorage.getItem('adminToken');
-    if (token === 'authenticated') {
-      setIsAuthenticated(true);
-    }
-    setLoading(false);
+    const checkAuth = () => {
+      const token = localStorage.getItem('adminToken');
+      console.log('Admin Token Check:', token);
+      if (token === 'authenticated') {
+        setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
+      }
+      setLoading(false);
+    };
+
+    checkAuth();
+
+    // Re-check auth ketika user kembali ke tab/window
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        checkAuth();
+      }
+    };
+
+    const handleFocus = () => {
+      checkAuth();
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('focus', handleFocus);
+    };
   }, []);
 
   if (loading) {

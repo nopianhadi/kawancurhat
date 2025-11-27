@@ -7,6 +7,7 @@ import About from './components/About';
 import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
 import Team from './components/Team';
+import Clients from './components/Clients';
 import Process from './components/Process';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
@@ -76,6 +77,7 @@ const HomePage: React.FC = () => {
         <Partners />
         <About id="about" />
         <Team />
+        <Clients />
         <WhyChooseUs />
         <Services id="services" onServiceClick={navigateToServiceDetail} />
         <Process />

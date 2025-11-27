@@ -251,19 +251,19 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ serviceId = 'hukum-pajak'
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <div className="relative bg-gradient-secondary text-white py-16 sm:py-20 md:py-24 mt-16">
+      <div className="relative bg-gradient-secondary text-white py-10 sm:py-16 md:py-20 lg:py-24 mt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-orange-500/10 to-transparent"></div>
-        <div className="relative container mx-auto px-3 sm:px-6 lg:px-8">
-          <span className="inline-block px-2 sm:px-3 py-1 bg-gradient-primary text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="inline-block px-2 sm:px-3 py-0.5 sm:py-1 bg-gradient-primary text-white text-[10px] sm:text-xs md:text-sm font-semibold rounded-full mb-2 sm:mb-3">
             {service.category}
           </span>
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">{service.name}</h1>
-          <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl">{service.description}</p>
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-3 md:mb-4">{service.name}</h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-2xl">{service.description}</p>
         </div>
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-12 lg:py-16">
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-4 sm:space-y-6 md:space-y-8">
@@ -323,26 +323,6 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ serviceId = 'hukum-pajak'
 
           {/* Sidebar */}
           <div className="space-y-4 sm:space-y-6">
-            {/* CTA Card */}
-            <div className="bg-brand-accent text-white rounded-xl shadow-lg p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Butuh Layanan Ini?</h3>
-              <p className="text-white/90 mb-3 sm:mb-4 text-xs sm:text-sm">
-                Konsultasikan kebutuhan Anda dengan tim ahli kami.
-              </p>
-              <a 
-                href={`mailto:${settings.email}`}
-                className="w-full bg-white text-brand-accent font-semibold py-2.5 sm:py-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 sm:mb-3 text-sm sm:text-base text-center block"
-              >
-                Jadwalkan Konsultasi
-              </a>
-              <a 
-                href={`tel:${settings.phone}`}
-                className="w-full bg-transparent border-2 border-white text-white font-semibold py-2.5 sm:py-3 rounded-lg hover:bg-white/10 transition-colors text-sm sm:text-base text-center block"
-              >
-                Hubungi Kami
-              </a>
-            </div>
-
             {/* Contact Info */}
             <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-brand-text mb-3 sm:mb-4">Informasi Kontak</h3>

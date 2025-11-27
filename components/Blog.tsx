@@ -47,11 +47,11 @@ const BlogCard: React.FC<{ post: typeof blogPosts[0], index: number, onClick: ()
             onClick={onClick}
         >
             <div className="overflow-hidden">
-                <img src={post.imgSrc} alt={post.title} className="w-full h-32 sm:h-40 md:h-48 lg:h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img src={post.imgSrc} alt={post.title} className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
             </div>
-            <div className="p-2 sm:p-3 md:p-4 lg:p-6">
+            <div className="p-2.5 sm:p-3 md:p-4 lg:p-5 xl:p-6">
                 <p className="text-brand-accent font-medium mb-0.5 sm:mb-1 text-[10px] sm:text-xs md:text-sm">{post.category}</p>
-                <h3 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-brand-text group-hover:text-brand-accent transition-colors duration-300">
+                <h3 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-brand-text group-hover:text-brand-accent transition-colors duration-300 leading-snug">
                     {post.title}
                 </h3>
             </div>
@@ -65,11 +65,11 @@ interface BlogProps {
 
 const Blog: React.FC<BlogProps> = ({ onPostClick }) => {
   return (
-    <section className="bg-white py-6 sm:py-12 md:py-16 lg:py-24 overflow-hidden">
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+    <section className="bg-white py-6 sm:py-10 md:py-16 lg:py-24 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-8">
         <div className="text-center mb-4 sm:mb-6 md:mb-10 lg:mb-12">
-            <p className="text-brand-accent font-semibold mb-0.5 sm:mb-1 md:mb-2 text-[10px] sm:text-xs md:text-sm">Blog</p>
-            <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-brand-text">
+            <p className="text-brand-accent font-semibold mb-1 sm:mb-2 text-[10px] sm:text-xs md:text-sm uppercase tracking-wider">Blog</p>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-brand-text">
                 Baca Dari Blog Kami
             </h2>
         </div>
@@ -86,7 +86,7 @@ const Blog: React.FC<BlogProps> = ({ onPostClick }) => {
         </div>
         
         <div className="text-center mt-4 sm:mt-6 md:mt-10 lg:mt-16">
-          <a href="#" className="inline-block bg-brand-accent text-white font-semibold px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 text-xs sm:text-sm md:text-base rounded-lg shadow-lg hover:opacity-90 transition-opacity">
+          <a href="#" className="inline-block bg-brand-accent text-white font-semibold px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 text-xs sm:text-sm md:text-base rounded-lg shadow-lg hover:opacity-90 transition-opacity">
             Lihat Semua Blog
           </a>
         </div>

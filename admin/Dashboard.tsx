@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Users, FileText, Briefcase, MessageSquare, Settings as SettingsIcon, LogOut, Menu, X, BarChart3, TrendingUp, Video, HelpCircle, Image } from 'lucide-react';
 import ContentManager from './ContentManager';
@@ -12,9 +12,18 @@ const Dashboard: React.FC<DashboardProps> = () => {
   const [activeMenu, setActiveMenu] = useState('dashboard');
 
   const handleLogout = () => {
-    localStorage.removeItem('adminToken');
-    navigate('/');
+    if (confirm('Apakah Anda yakin ingin keluar?')) {
+      console.log('Logging out - removing token');
+      localStorage.removeItem('adminToken');
+      window.location.href = '/';
+    }
   };
+
+  // Debug: Log token status saat component mount
+  useEffect(() => {
+    const token = localStorage.getItem('adminToken');
+    console.log('Dashboard mounted - Token:', token);
+  }, []);
 
   const stats = [
     { label: 'Artikel Blog', value: '3', change: '+100%', icon: FileText, color: 'bg-blue-500' },
@@ -39,23 +48,12 @@ const Dashboard: React.FC<DashboardProps> = () => {
       {/* Sidebar */}
       <aside className={`${sidebarOpen ? 'w-64' : 'w-20'} bg-gray-900 text-white transition-all duration-300 flex flex-col`}>
         <div className="p-4 border-b border-gray-800">
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-between">
             {sidebarOpen && <h1 className="text-xl font-bold">Admin Panel</h1>}
             <button onClick={() => setSidebarOpen(!sidebarOpen)} className="p-2 hover:bg-gray-800 rounded">
               {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
-          {sidebarOpen && (
-            <a 
-              href="/" 
-              className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-              </svg>
-              Kembali ke Website
-            </a>
-          )}
         </div>
 
         <nav className="flex-1 p-4">
@@ -88,11 +86,23 @@ const Dashboard: React.FC<DashboardProps> = () => {
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         <header className="bg-white shadow-sm p-4 flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-gray-800">Dashboard</h2>
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800">
+              {menuItems.find(item => item.id === activeMenu)?.label || 'Dashboard'}
+            </h2>
+            {activeMenu !== 'dashboard' && (
+              <button 
+                onClick={() => setActiveMenu('dashboard')}
+                className="text-sm text-blue-600 hover:text-blue-800 mt-1 flex items-center gap-1"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Kembali ke Dashboard
+              </button>
+            )}
+          </div>
           <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-gray-100 rounded-full">
-              <MessageSquare size={20} />
-            </button>
             <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
               A
             </div>

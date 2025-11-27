@@ -13,6 +13,7 @@ interface ContentItem {
   content?: string;
   quote?: string;
   image?: string;
+  imgSrc?: string;
   author?: string;
   date?: string;
   category?: string;
@@ -20,6 +21,7 @@ interface ContentItem {
   answer?: string;
   name?: string;
   role?: string;
+  company?: string;
   rating?: number;
   videoUrl?: string;
   duration?: string;
@@ -74,19 +76,19 @@ const ContentManager: React.FC<ContentManagerProps> = ({ contentType }) => {
       case 'testimonials':
         return {
           title: 'Kelola Testimoni',
-          fields: ['name', 'role', 'quote', 'rating', 'image'],
+          fields: ['name', 'company', 'quote', 'rating', 'imgSrc'],
           emptyState: 'Belum ada testimoni'
         };
       case 'videos':
         return {
           title: 'Kelola Video Testimoni',
-          fields: ['name', 'role', 'videoUrl', 'description', 'image', 'duration'],
+          fields: ['name', 'company', 'videoUrl', 'description', 'imgSrc', 'duration'],
           emptyState: 'Belum ada video testimoni'
         };
       case 'faq':
         return {
           title: 'Kelola FAQ',
-          fields: ['question', 'answer', 'category'],
+          fields: ['question', 'answer'],
           emptyState: 'Belum ada FAQ'
         };
       case 'gallery':
@@ -211,7 +213,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({ contentType }) => {
     }
 
     // Field image dengan upload
-    if (field === 'image') {
+    if (field === 'image' || field === 'imgSrc') {
       return (
         <div key={field} className="mb-4">
           <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -275,6 +277,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({ contentType }) => {
           {field === 'title' ? 'Judul' : 
            field === 'category' ? 'Kategori' :
            field === 'name' ? 'Nama' :
+           field === 'company' ? 'Perusahaan/Jabatan' :
            field === 'role' ? 'Perusahaan/Jabatan' :
            field === 'question' ? 'Pertanyaan' :
            field === 'videoUrl' ? 'URL Video (YouTube/Vimeo)' :
@@ -288,6 +291,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({ contentType }) => {
           placeholder={`Masukkan ${field === 'title' ? 'judul' : 
                                    field === 'category' ? 'kategori' :
                                    field === 'name' ? 'nama' :
+                                   field === 'company' ? 'perusahaan/jabatan' :
                                    field === 'role' ? 'perusahaan/jabatan' :
                                    field === 'videoUrl' ? 'URL video' :
                                    field === 'duration' ? 'durasi' : field}`}
@@ -386,9 +390,9 @@ const ContentManager: React.FC<ContentManagerProps> = ({ contentType }) => {
                 <div key={item.id} className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
                   {/* Image */}
                   <div className="aspect-square overflow-hidden bg-gray-100">
-                    {item.image ? (
+                    {(item.image || item.imgSrc) ? (
                       <img 
-                        src={item.image} 
+                        src={item.image || item.imgSrc} 
                         alt={item.title || 'Gallery image'} 
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
@@ -438,10 +442,10 @@ const ContentManager: React.FC<ContentManagerProps> = ({ contentType }) => {
                 <div key={item.id} className="p-6 hover:bg-gray-50 transition-colors">
                   <div className="flex items-start justify-between gap-4">
                     {/* Image thumbnail untuk item dengan gambar */}
-                    {item.image && (
+                    {(item.image || item.imgSrc) && (
                       <div className="flex-shrink-0">
                         <img 
-                          src={item.image} 
+                          src={item.image || item.imgSrc} 
                           alt={item.title || item.name || 'Thumbnail'} 
                           className="w-20 h-20 object-cover rounded-lg"
                         />
@@ -461,9 +465,9 @@ const ContentManager: React.FC<ContentManagerProps> = ({ contentType }) => {
                             {item.category}
                           </span>
                         )}
-                        {item.role && (
+                        {(item.company || item.role) && (
                           <span className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                            {item.role}
+                            {item.company || item.role}
                           </span>
                         )}
                         {item.rating && (

@@ -6,6 +6,7 @@ import About from './components/About';
 import WhyChooseUs from './components/WhyChooseUs';
 import Services from './components/Services';
 import Team from './components/Team';
+import Clients from './components/Clients';
 import Process from './components/Process';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
@@ -38,6 +39,7 @@ const App: React.FC = () => {
         <WhyChooseUs />
         <Services id="services" />
         <Team />
+        <Clients />
         <Process />
         <Testimonials />
         <VideoTestimonials />

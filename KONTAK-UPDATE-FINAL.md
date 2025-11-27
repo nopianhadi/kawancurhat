@@ -21,8 +21,8 @@ Semua informasi kontak telah disesuaikan dengan Kawan Curhat Konsultan
 
 ## 👥 Tim Konsultan - Email & Telepon
 
-### 1. Andi Firmansyah, S.H., M.H.
-**Posisi:** Konsultan Hukum Bisnis Senior  
+### 1. Aship Firmansyah, S.E., S.H.
+**Posisi:** Konsultan Hukum Bisnis dan Pengacara  
 **Email:** andi.firmansyah@kawancurhat.com  
 **Telepon:** 08567886251  
 **Pengalaman:** 15+ tahun  
@@ -80,10 +80,10 @@ Semua informasi kontak telah disesuaikan dengan Kawan Curhat Konsultan
 ### 2. components/TeamDetail.tsx
 ✅ **4 Anggota Tim Diupdate:**
 
-**Andi Firmansyah:**
+**Aship Firmansyah:**
 - ID: jessica-miller → andi-firmansyah
-- Nama: Jessica Miller → Andi Firmansyah, S.H., M.H.
-- Role: Partner Senior → Konsultan Hukum Bisnis Senior
+- Nama: Jessica Miller → Aship Firmansyah, S.E., S.H.
+- Role: Partner Senior → Konsultan Hukum Bisnis dan Pengacara
 - Email: jessica.miller@kawancurhat.com → andi.firmansyah@kawancurhat.com
 - Phone: +62 812-3456-7890 → 08567886251
 - Bio & Keahlian disesuaikan

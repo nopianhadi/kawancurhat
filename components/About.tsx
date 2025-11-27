@@ -84,12 +84,14 @@ const AboutCard: React.FC<{ title: string; description: string; imgSrc: string; 
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-3 sm:p-4 md:p-6 w-full">
-                <div className="absolute -top-4 sm:-top-5 md:-top-6 left-3 sm:left-4 md:left-6 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-brand-accent rounded-full flex items-center justify-center z-10 shadow-lg group-hover:scale-110 transition-all duration-500">
-                    {getIcon(title)}
+                <div className="absolute -top-4 sm:-top-5 md:-top-6 left-2.5 sm:left-3 md:left-4 lg:left-6 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-brand-accent rounded-full flex items-center justify-center z-10 shadow-lg group-hover:scale-110 transition-all duration-500">
+                    <div className="scale-75 sm:scale-90 md:scale-100">
+                        {getIcon(title)}
+                    </div>
                 </div>
-                <div className="relative bg-white/90 backdrop-blur-sm p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-xl shadow-md border border-white/20 group-hover:bg-white transition-all duration-300">
-                    <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-brand-text mb-1">{title}</h3>
-                    <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500 ease-in-out">
+                <div className="relative bg-white/90 backdrop-blur-sm p-2.5 sm:p-3 md:p-4 lg:p-5 rounded-lg sm:rounded-xl shadow-md border border-white/20 group-hover:bg-white transition-all duration-300">
+                    <h3 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-brand-text mb-0.5 sm:mb-1">{title}</h3>
+                    <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-500 ease-in-out leading-relaxed">
                         {description}
                     </p>
                 </div>
@@ -105,14 +107,14 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ id }) => {
   return (
-    <section id={id} className="bg-white py-6 sm:py-12 md:py-16 lg:py-24 overflow-hidden">
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+    <section id={id} className="bg-white py-6 sm:py-10 md:py-16 lg:py-24 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-8">
         <div className="text-center mb-4 sm:mb-6 md:mb-10 lg:mb-12">
-            <p className="text-brand-accent font-semibold mb-0.5 sm:mb-1 md:mb-2 text-[10px] sm:text-xs md:text-sm">Tentang Kami</p>
-            <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-brand-text">
+            <p className="text-brand-accent font-semibold mb-1 sm:mb-2 text-[10px] sm:text-xs md:text-sm uppercase tracking-wider">Tentang Kami</p>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-brand-text">
             Kawan Curhat
             </h2>
-            <p className="max-w-3xl mx-auto text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 mt-1 sm:mt-2 md:mt-3 lg:mt-4 px-2">
+            <p className="max-w-3xl mx-auto text-[10px] sm:text-xs md:text-sm lg:text-base text-gray-600 mt-1.5 sm:mt-2 md:mt-3 px-4">
                 Kawan Curhat adalah lembaga profesional yang bergerak di bidang konsultasi hukum bisnis dan legal kontrak. Kami membantu pelaku usaha dan perusahaan dalam menjaga legalitas, keamanan bisnis, serta memastikan setiap langkah bisnis terlindungi dari risiko hukum. Dengan pendekatan yang komunikatif dan solutif, kami berkomitmen menjadi mitra terpercaya dalam setiap keputusan bisnis Anda.
             </p>
         </div>
