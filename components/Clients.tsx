@@ -1,19 +1,35 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const clientsData = [
-  { no: 1, perusahaan: 'PT. WIRA PAPER', alamat: 'Tangerang', bidang: 'PAPER MANUFACTURER' },
-  { no: 2, perusahaan: 'PT. PERDANA KARYA AGUNG', alamat: 'Tangerang', bidang: 'OUTSOURCHING' },
-  { no: 3, perusahaan: 'YAYASAN MELATI INDOPRIMA', alamat: 'Tangerang', bidang: 'SOCIAL' },
-  { no: 4, perusahaan: 'PT. GRIYA SAGUNA INDAH', alamat: 'Pandeglang', bidang: 'PROPERTY' },
-  { no: 5, perusahaan: 'PT. INTI PERMATA RESTU', alamat: 'Jakarta Barat', bidang: 'INTERMEDIATE GOODS' },
-  { no: 6, perusahaan: 'PT. NUANSA VANINDO', alamat: 'Jakarta Pusat', bidang: 'CONSTRUCTION' },
-  { no: 7, perusahaan: 'PT. INEXT ARSINDO', alamat: 'Tangerang', bidang: 'DEVELOPER & PERHOTELAN' },
-  { no: 8, perusahaan: 'PT. SHANFU METAL INDUSTRY', alamat: 'Tangerang', bidang: 'WIRE RODE' }
+const defaultClientsData = [
+  { no: 1, perusahaan: 'PT. WIRA PAPER', alamat: '📍 Tangerang', bidang: 'PAPER MANUFACTURER' },
+  { no: 2, perusahaan: 'PT. PERDANA KARYA AGUNG', alamat: '📍 Tangerang', bidang: 'OUTSOURCHING' },
+  { no: 3, perusahaan: 'PT. GRIYA SAGUNA INDAH', alamat: '📍 Pandeglang', bidang: 'PROPERTY' },
+  { no: 4, perusahaan: 'PT. INTI PERMATA RESTU', alamat: '📍 Jakarta Barat', bidang: 'INTERMEDIATE GOODS' },
+  { no: 5, perusahaan: 'PT. NUANSA VANINDO', alamat: '📍 Jakarta Pusat', bidang: 'CONSTRUCTION' },
+  { no: 6, perusahaan: 'PT. INEXT ARSINDO', alamat: '📍 Tangerang', bidang: 'DEVELOPER & PERHOTELAN' },
+  { no: 7, perusahaan: 'PT. SHANFU METAL INDUSTRY', alamat: '📍 Tangerang', bidang: 'WIRE RODE' },
+  { no: 8, perusahaan: 'Ibu Yati', alamat: '📍 Indonesia', bidang: 'JASA EKSPEDISI' }
 ];
 
 const Clients: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [clientsData, setClientsData] = useState(defaultClientsData);
+
+  // Load clients from localStorage if available
+  useEffect(() => {
+    const storedClients = localStorage.getItem('admin_clients_data');
+    if (storedClients) {
+      try {
+        const parsedClients = JSON.parse(storedClients);
+        if (Array.isArray(parsedClients) && parsedClients.length > 0) {
+          setClientsData(parsedClients);
+        }
+      } catch (error) {
+        console.error('Error parsing clients data:', error);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -101,7 +117,7 @@ const Clients: React.FC = () => {
                       </span>
                       <h3 className="text-xs sm:text-sm font-bold text-brand-text leading-tight">{client.perusahaan}</h3>
                     </div>
-                    <p className="text-[10px] sm:text-xs text-gray-600 ml-6 sm:ml-8">📍 {client.alamat}</p>
+                    <p className="text-[10px] sm:text-xs text-gray-600 ml-6 sm:ml-8">{client.alamat}</p>
                   </div>
                 </div>
                 <div className="ml-6 sm:ml-8 mt-1.5 sm:mt-2">
