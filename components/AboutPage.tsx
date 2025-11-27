@@ -106,7 +106,7 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
               <div className="group hover:translate-x-2 transition-transform duration-300">
-                <div className="text-6xl font-bold text-brand-accent mb-3 group-hover:scale-110 transition-transform duration-300">500+</div>
+                <div className="text-6xl font-bold text-brand-accent mb-3 group-hover:scale-110 transition-transform duration-300">300+</div>
                 <p className="text-gray-700 text-lg leading-relaxed">
                   Klien Terlayani dengan solusi hukum yang aman, praktis, dan berintegritas untuk kebutuhan bisnis mereka.
                 </p>
@@ -253,11 +253,11 @@ const AboutPage: React.FC = () => {
               <div className="text-white/90 text-xs sm:text-sm md:text-base lg:text-lg">Tahun Pengalaman</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-500">
-              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-accent mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">500+</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-accent mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">300+</div>
               <div className="text-white/90 text-xs sm:text-sm md:text-base lg:text-lg">Klien Terlayani</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-500">
-              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-accent mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">1000+</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-brand-accent mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">600+</div>
               <div className="text-white/90 text-xs sm:text-sm md:text-base lg:text-lg">Kontrak Disusun</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-500">

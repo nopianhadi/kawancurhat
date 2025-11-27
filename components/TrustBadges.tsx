@@ -4,7 +4,7 @@ const badges = [
   { icon: '🏆', title: 'Berpengalaman', subtitle: '10+ Tahun Konsultasi Bisnis' },
   { icon: '⭐', title: 'Rating Tertinggi', subtitle: 'Kepuasan Klien 95%' },
   { icon: '✓', title: 'Profesional', subtitle: 'Konsultan Bersertifikat' },
-  { icon: '🛡️', title: 'Terpercaya', subtitle: '1000+ Kontrak Disusun' }
+  { icon: '🛡️', title: 'Terpercaya', subtitle: '600+ Kontrak Disusun' }
 ];
 
 const TrustBadges: React.FC = () => {
