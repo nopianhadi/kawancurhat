@@ -164,6 +164,17 @@ export const sampleFAQs = [
   }
 ];
 
+export const sampleClients = [
+  { no: 1, perusahaan: 'PT. WIRA PAPER', alamat: 'Tangerang', bidang: 'PAPER MANUFACTURER' },
+  { no: 2, perusahaan: 'PT. PERDANA KARYA AGUNG', alamat: 'Tangerang', bidang: 'OUTSOURCHING' },
+  { no: 3, perusahaan: 'PT. GRIYA SAGUNA INDAH', alamat: 'Pandeglang', bidang: 'PROPERTY' },
+  { no: 4, perusahaan: 'PT. INTI PERMATA RESTU', alamat: 'Jakarta Barat', bidang: 'INTERMEDIATE GOODS' },
+  { no: 5, perusahaan: 'PT. NUANSA VANINDO', alamat: 'Jakarta Pusat', bidang: 'CONSTRUCTION' },
+  { no: 6, perusahaan: 'PT. INEXT ARSINDO', alamat: 'Tangerang', bidang: 'DEVELOPER & PERHOTELAN' },
+  { no: 7, perusahaan: 'PT. SHANFU METAL INDUSTRY', alamat: 'Tangerang', bidang: 'WIRE RODE' },
+  { no: 8, perusahaan: 'Ibu Yati', alamat: 'Indonesia', bidang: 'JASA EKSPEDISI' }
+];
+
 export const sampleGallery = [
   {
     id: '1',
@@ -266,17 +277,19 @@ export const loadSampleData = (contentType: string) => {
       return sampleFAQs;
     case 'gallery':
       return sampleGallery;
+    case 'clients':
+      return sampleClients;
     default:
       return [];
   }
 };
 
 // Data version - increment this when image paths or data structure changes
-export const DATA_VERSION = 7;
+export const DATA_VERSION = 8;
 
 // Helper function untuk save ke localStorage
 export const initializeSampleData = () => {
-  const dataTypes = ['blog', 'services', 'testimonials', 'videos', 'faq', 'gallery'];
+  const dataTypes = ['blog', 'services', 'testimonials', 'videos', 'faq', 'gallery', 'clients'];
   const currentVersion = localStorage.getItem('data_version');
   
   // Force reload if version changed
