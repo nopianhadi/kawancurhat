@@ -52,14 +52,30 @@
     <script>
       // Auto-clear cache if data version is outdated
       (function() {
-        const CURRENT_VERSION = '2';
+        const CURRENT_VERSION = '8';
         const storedVersion = localStorage.getItem('data_version');
-        if (storedVersion && storedVersion !== CURRENT_VERSION) {
-          console.log('Data version outdated, clearing cache...');
+        
+        // Force clear if version doesn't match
+        if (storedVersion !== CURRENT_VERSION) {
+          console.log('Data version outdated (stored: ' + storedVersion + ', current: ' + CURRENT_VERSION + '), clearing cache...');
           localStorage.clear();
           sessionStorage.clear();
           localStorage.setItem('data_version', CURRENT_VERSION);
-          window.location.reload();
+          
+          // Set correct clients data
+          const correctClients = [
+            { no: 1, perusahaan: 'PT. WIRA PAPER', alamat: 'Tangerang', bidang: 'PAPER MANUFACTURER' },
+            { no: 2, perusahaan: 'PT. PERDANA KARYA AGUNG', alamat: 'Tangerang', bidang: 'OUTSOURCHING' },
+            { no: 3, perusahaan: 'PT. GRIYA SAGUNA INDAH', alamat: 'Pandeglang', bidang: 'PROPERTY' },
+            { no: 4, perusahaan: 'PT. INTI PERMATA RESTU', alamat: 'Jakarta Barat', bidang: 'INTERMEDIATE GOODS' },
+            { no: 5, perusahaan: 'PT. NUANSA VANINDO', alamat: 'Jakarta Pusat', bidang: 'CONSTRUCTION' },
+            { no: 6, perusahaan: 'PT. INEXT ARSINDO', alamat: 'Tangerang', bidang: 'DEVELOPER & PERHOTELAN' },
+            { no: 7, perusahaan: 'PT. SHANFU METAL INDUSTRY', alamat: 'Tangerang', bidang: 'WIRE RODE' },
+            { no: 8, perusahaan: 'Ibu Yati', alamat: 'Indonesia', bidang: 'JASA EKSPEDISI' }
+          ];
+          localStorage.setItem('admin_clients_data', JSON.stringify(correctClients));
+          
+          window.location.reload(true);
         }
       })();
     </script>
