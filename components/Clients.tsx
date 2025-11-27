@@ -3,12 +3,12 @@ import React, { useState, useEffect, useRef } from 'react';
 const clientsData = [
   { no: 1, perusahaan: 'PT. WIRA PAPER', alamat: 'Tangerang', bidang: 'PAPER MANUFACTURER' },
   { no: 2, perusahaan: 'PT. PERDANA KARYA AGUNG', alamat: 'Tangerang', bidang: 'OUTSOURCHING' },
-  { no: 3, perusahaan: 'PT. GRIYA SAGUNA INDAH', alamat: 'Pandeglang', bidang: 'PROPERTY' },
-  { no: 4, perusahaan: 'PT. INTI PERMATA RESTU', alamat: 'Jakarta Barat', bidang: 'INTERMEDIATE GOODS' },
-  { no: 5, perusahaan: 'PT. NUANSA VANINDO', alamat: 'Jakarta Pusat', bidang: 'CONSTRUCTION' },
-  { no: 6, perusahaan: 'PT. INEXT ARSINDO', alamat: 'Tangerang', bidang: 'DEVELOPER & PERHOTELAN' },
-  { no: 7, perusahaan: 'PT. SHANFU METAL INDUSTRY', alamat: 'Tangerang', bidang: 'WIRE RODE' },
-  { no: 8, perusahaan: 'Ibu Yati', alamat: 'Indonesia', bidang: 'JASA EKSPEDISI' }
+  { no: 3, perusahaan: 'YAYASAN MELATI INDOPRIMA', alamat: 'Tangerang', bidang: 'SOCIAL' },
+  { no: 4, perusahaan: 'PT. GRIYA SAGUNA INDAH', alamat: 'Pandeglang', bidang: 'PROPERTY' },
+  { no: 5, perusahaan: 'PT. INTI PERMATA RESTU', alamat: 'Jakarta Barat', bidang: 'INTERMEDIATE GOODS' },
+  { no: 6, perusahaan: 'PT. NUANSA VANINDO', alamat: 'Jakarta Pusat', bidang: 'CONSTRUCTION' },
+  { no: 7, perusahaan: 'PT. INEXT ARSINDO', alamat: 'Tangerang', bidang: 'DEVELOPER & PERHOTELAN' },
+  { no: 8, perusahaan: 'PT. SHANFU METAL INDUSTRY', alamat: 'Tangerang', bidang: 'WIRE RODE' }
 ];
 
 const Clients: React.FC = () => {

@@ -19,7 +19,7 @@ const teamMembers = [
       whatsapp: 'https://wa.me/6285678862510',
       tiktok: 'https://www.tiktok.com/@kawancurhat'
     },
-    bio: 'Konsultan hukum bisnis dengan pengalaman lebih dari 10 tahun dalam memberikan solusi hukum strategis untuk berbagai perusahaan.'
+    bio: 'Konsultan hukum bisnis dengan pengalaman lebih dari 15 tahun dalam memberikan solusi hukum strategis untuk berbagai perusahaan.'
   }
 ];
 

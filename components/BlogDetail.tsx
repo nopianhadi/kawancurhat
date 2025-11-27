@@ -173,7 +173,7 @@ const BlogDetail: React.FC<BlogDetailProps> = ({ postId = '10-pertanyaan-kunci' 
                 </div>
               </div>
               <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm leading-relaxed">
-                Ahli hukum dengan pengalaman lebih dari 10 tahun dalam memberikan solusi hukum terbaik.
+                Ahli hukum dengan pengalaman lebih dari 15 tahun dalam memberikan solusi hukum terbaik.
               </p>
             </div>
 
